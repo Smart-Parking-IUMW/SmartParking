@@ -1,0 +1,98 @@
+package com.example.smartparking;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+public class Profile extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_profile);
+        getSupportActionBar().setTitle("PROFILE");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home_menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.addMenu:
+                goToSettings();
+                return true;
+            case R.id.addMenu2:
+                goToNotification();
+                return true;
+            case R.id.addMenu3:
+                goToOut();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void btn_homepage(View view){
+        startActivity(new Intent(getApplicationContext(),HomePage.class));
+    }
+
+    public void btn_profile(View view){
+        startActivity(new Intent(getApplicationContext(),Profile.class));
+    }
+
+    public void btn_menu(View view){
+        startActivity(new Intent(getApplicationContext(), Menu.class));
+    }
+    public void btn_scan(View view){
+        startActivity(new Intent(getApplicationContext(), Scan.class));
+    }
+    public void btn_payment(View view){
+        startActivity(new Intent(getApplicationContext(), CheckPayment.class));
+    }
+    public void btn_reservation(View view){
+        startActivity(new Intent(getApplicationContext(), Reservation.class));
+    }
+
+    private void goToOut() {
+        Toast.makeText(getApplicationContext(), "Log Out Successful!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Profile.this, LogIn.class);
+        startActivity(intent);
+    }
+    private void goToSettings() {
+        Intent intent = new Intent(Profile.this, Notification.class);
+        startActivity(intent);
+    }
+
+    private void goToNotification() {
+        Intent intent = new Intent(Profile.this, Settings.class);
+        startActivity(intent);
+    }
+
+    public void btn_profilephoto(View view){
+        startActivity(new Intent(getApplicationContext(), ProfilePhoto.class));
+    }
+    public void btn_username(View view){
+        startActivity(new Intent(getApplicationContext(), ProfileUsername.class));
+    }
+    public void btn_email(View view){
+        startActivity(new Intent(getApplicationContext(), ProfileEmail.class));
+    }
+    public void btn_password(View view){
+        startActivity(new Intent(getApplicationContext(), ProfilePassword.class));
+    }
+    public void btn_gender(View view){
+        startActivity(new Intent(getApplicationContext(), ProfileGender.class));
+    }
+}
