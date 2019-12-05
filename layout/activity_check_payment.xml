@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckPayment">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="194dp"
+        android:layout_marginRight="194dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="btn_homepage"
+        app:layout_constraintEnd_toStartOf="@+id/viewprofile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/viewprofile"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="194dp"
+        android:layout_marginLeft="194dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
+        android:onClick="btn_profile"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/homepage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="btn_homepage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/reservation"
+        android:onClick="btn_reservation"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homepage"
+        app:srcCompat="@drawable/reservation" />
+
+    <ImageView
+        android:id="@+id/scan"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="btn_scan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toEndOf="@+id/reservation"
+        app:srcCompat="@drawable/scan" />
+
+    <ImageView
+        android:id="@+id/payment"
+        android:layout_width="49dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/scan"
+        android:onClick="btn_payment"
+        app:srcCompat="@drawable/payment" />
+
+    <ImageView
+        android:id="@+id/profileicon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="btn_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/payment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/payment"
+        app:srcCompat="@drawable/menu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/payment"
+        tools:layout_editor_absoluteX="19dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="btn_checkout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/car1"
+                    android:layout_width="52dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="profile1"
+                    app:srcCompat="@drawable/car_foreground" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/carnum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Car Number :                  xxx" />
+
+                    <TextView
+                        android:id="@+id/floorlevel"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Floor Level:                     xxx" />
+
+                    <TextView
+                        android:id="@+id/parkedlocation"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Location:           xxx" />
+
+                    <TextView
+                        android:id="@+id/time_date"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Checked-In Time:          xxx" />
+
+                    <TextView
+                        android:id="@+id/parkedhours"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Hours:                xxx" />
+
+                    <TextView
+                        android:id="@+id/paymentamount"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Payment Amount:         xxx" />
+
+                    <TextView
+                        android:id="@+id/parkingtype"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parking Type:                 xxx" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/car2"
+                    android:layout_width="52dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="car2"
+                    app:srcCompat="@drawable/car_foreground" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/carnum2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Car Number :                  WWW 2324"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/floorleve2"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Floor Level:                     Level  B2 "
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/parkedlocation2"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Location:           A12, Leisure Mall"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/checkin2"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Checked-In Time:          12: 20 PM"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkedhours2"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Hours:                2 hours"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/paymentamount2"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Payment Amount:         RM 3"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkingtype2"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parking Type:                 Reserved Parking"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/car3"
+                    android:layout_width="52dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="car3"
+                    app:srcCompat="@drawable/car_foreground" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/carnum3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Car Number :                  WYT 8990"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/floorleve3"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Floor Level:                     Level  B1 "
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/parkedlocation3"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Location:           C33, MyTown"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/checkin3"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Checked-In Time:          9: 44 AM"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkedhours3"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Hours:                59 minutes"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/paymentamount3"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Payment Amount:         FREE"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkingtype3"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parking Type:                 Ladies Parking"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/car4"
+                    android:layout_width="52dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="car4"
+                    app:srcCompat="@drawable/car_foreground" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/carnum4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Car Number :                  TWW 1220"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/floorleve4"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Floor Level:                     Level  B2 "
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/parkedlocation4"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Location:           D01, MyTown"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/checkin4"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Checked-In Time:          1: 34 PM"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkedhours4"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Hours:                30 minutes"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/paymentamount4"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Payment Amount:         FREE"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkingtype4"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parking Type:                 Normal Parking"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/car5"
+                    android:layout_width="52dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="car5"
+                    app:srcCompat="@drawable/car_foreground" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/carnum5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Car Number :                  WCC 2780"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/floorleve5"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Floor Level:                     Level  B3 "
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/parkedlocation5"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Location:           A17, TimeSquare"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/checkin5"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Checked-In Time:          7: 10 PM"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkedhours5"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parked Hours:                1 hours"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/paymentamount5"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Payment Amount:         RM 1"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/parkingtype5"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Parking Type:                 OKU Parking"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

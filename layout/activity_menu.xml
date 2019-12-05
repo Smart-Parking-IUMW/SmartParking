@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="194dp"
+        android:layout_marginRight="194dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="btn_homepage"
+        app:layout_constraintEnd_toStartOf="@+id/viewprofile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/viewprofile"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="194dp"
+        android:layout_marginLeft="194dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
+        android:onClick="btn_profile"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/homepage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="btn_homepage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/reservation"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:onClick="btn_reservation"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homepage"
+        app:srcCompat="@drawable/reservation" />
+
+    <ImageView
+        android:id="@+id/scan"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="btn_scan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toEndOf="@+id/reservation"
+        app:srcCompat="@drawable/scan" />
+
+    <ImageView
+        android:id="@+id/payment"
+        android:layout_width="49dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:onClick="btn_payment"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/scan"
+        app:srcCompat="@drawable/payment" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="btn_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/payment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/payment"
+        app:srcCompat="@drawable/menu" />
+
+    <Button
+        android:id="@+id/editprofile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:foregroundGravity="center"
+        android:gravity="start"
+        android:onClick="btn_profile"
+        android:text="   Edit Profile                                                                              >"
+        app:layout_constraintBottom_toTopOf="@+id/history"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:foregroundGravity="center"
+        android:onClick="btn_history"
+        android:gravity="start"
+        android:text="   History                                                                                       >"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editprofile" />
+
+    <Button
+        android:id="@+id/mywallet"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="btn_mywallet"
+        android:gravity="start"
+        android:text="   My Wallet                                                                                 >"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+    <Button
+        android:id="@+id/promotion"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="btn_promotion"
+        android:gravity="start"
+        android:text="  Promotion                                                                                 >"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mywallet" />
+
+    <Button
+        android:id="@+id/news"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="start"
+        android:onClick="btn_news"
+        android:text="   News                                                                                             >"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promotion" />
+
+    <Button
+        android:id="@+id/support"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="start"
+        android:onClick="btn_support"
+        android:text="   Support                                                                                      >"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/news" />
+
+    <Button
+        android:id="@+id/contactus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="start"
+        android:onClick="btn_contactus"
+        android:text="   Contact Us                                                                               >"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/support" />
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="start"
+        android:onClick="btn_aboutus"
+        android:text="   About                                                                                           >"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
